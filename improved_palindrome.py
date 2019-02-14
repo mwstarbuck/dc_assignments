@@ -16,13 +16,20 @@ def reverse(entry):
 
 
 def is_palindrome(entry, rev_entry, word):
+    result = False
     if entry == rev_entry:
-        print(f"{word} is a palindrome!")
-    else:
-        print(f"{word} is not a palindrome!")
+        #print(f"{word} is a palindrome!")
+        result = True
+
+    return result
 
 
-is_palindrome(l_word, reverse(l_word), word)
+result = is_palindrome(l_word, reverse(l_word), word)
+
+if result:
+    print(f"{word} is a palindrome!")
+else:
+    print(f"{word} is NOT a palindrome!")
 
 # method found online better!
 
