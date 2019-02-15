@@ -3,9 +3,13 @@
 # create an array to store tasks(dict)
 tasks = []
 
+# print lines to format the output
+
 
 def print_lines():
     print("------------------ \n")
+
+# function that runs in while statement -- takes user #input and runs appropriate function
 
 
 def chooser(user_input):
@@ -42,7 +46,7 @@ def view_all_tasks():
     # view all tasks
     print_lines()
     for i in range(0, len(tasks)):
-        # for task in tasks[i].items():
+        # can use task = tasks[i] !!!
         print(f"{i + 1} - {tasks[i]['title']} - {tasks[i]['priority']}")
     print_lines()
     # prints all tasks added by user
@@ -50,7 +54,7 @@ def view_all_tasks():
 
 def delete_task():
     # show task names
-    print("This is the list of tasks to delete from:")
+    print("This is the list of tasks to delete from: ")
     view_all_tasks()
     # give user a choice of which task to delete
     to_delete = int(input("Enter the task number to delete the task: "))
